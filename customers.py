@@ -2,8 +2,18 @@
 # Name: Ahraya Dalaq
 #
 # REFLECTION
-# 1. (answer goes here)
-# 2. (answer goes here)
+# 1. I'd use bracket notation when the key MUST exist, like a customer ID or
+#    name, because if it's missing that's a real bug and I want the program to
+#    stop loudly with a KeyError. I'd use .get() with a default for optional
+#    fields, like a phone number or email that some customers don't have.
+#    My rule of thumb: required data -> brackets, optional data -> .get().
+#
+# 2.  Building totals by region with a loop is like a SUMIF or a PivotTable in
+#    Excel, where you group rows by a category and add up the amounts. The
+#    Python version is more useful for large datasets because it can handle
+#    millions of rows that would slow down or crash a spreadsheet, and the
+#    script can be rerun on new data automatically instead of rebuilding
+#    the pivot by hand every time.
 
 
 # ---------------------------------------------------------------
