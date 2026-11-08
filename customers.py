@@ -36,3 +36,32 @@ print(customer)
 
 del customer["email"]                  # delete a field
 print(customer)
+
+
+
+# ---------------------------------------------------------------
+# Exercise 3 — Safe lookup
+# ---------------------------------------------------------------
+print("\n=== Exercise 3: Safe lookup ===")
+email = customer.get("email", "no email on file")
+print("Using .get():", email)
+
+try:
+    print(customer["email"])
+except KeyError as error:
+    print("Using brackets: KeyError for", error)
+
+
+# ---------------------------------------------------------------
+# Exercise 4 — Iterate
+# ---------------------------------------------------------------
+print("\n=== Exercise 4: Iterate ===")
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+print("--- without .items() ---")
+for key in customer:
+    print(key)
+# Looping over a dict directly only gives you the KEYS.
+# .items() gives you (key, value) pairs, so you can unpack both at once.
+# Without .items() you'd have to write customer[key] to get each value.
